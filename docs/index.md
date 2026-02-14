@@ -1,16 +1,18 @@
 # Alisa Chikomazova
 
 ### About
-I am a student who is doing first steps in deviloping and design
+I am a student taking my first steps in development and design. 
 
 ### Current Focus
 * **Python Development**
 * Designing web interfaces
-* Working with artificial intellegent
+* Working with artificial intelligence
 
 ### Navigation
-[Labs](labs.md)
-[More about me](author.md)
+* [Laboratory Works](labs.md) — *View all my projects*
+* [More about me](author.md) — *My background and hobbies*
 
 ---
+![Alisa](img/me.jpg)
+
 *Est. 2026*

@@ -17,9 +17,8 @@
 
 /* 1. ФОН И СТРУКТУРА СТРАНИЦЫ */
 body {
-    /* Убираем клетку и ставим нежный градиент */
-    background: var(--bg-gradient) !important;
-    background-attachment: fixed !important; /* Фон остается на месте при прокрутке */
+    background: radial-gradient(circle, #ffffff 0%, #fff5f8 100%) !important;
+    background-attachment: fixed !important;
     color: var(--text-secondary) !important;
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
@@ -127,3 +126,27 @@ a:hover {
 }
 
 footer { display: none !important; }
+
+/* Убираем синюю полоску слева в боковом меню */
+.bs-sidebar .nav > .active > a {
+    border-left: 2px solid var(--border-soft) !important; /* Делаем ее очень светлой */
+    color: var(--text-primary) !important;
+    background-color: transparent !important;
+}
+
+/* Полностью скрываем активный маркер, если он мешает */
+.bs-sidebar .nav > li > a {
+    border-left: 2px solid transparent !important;
+}
+
+/* Стиль для твоего фото */
+img[alt="Alisa"] {
+    display: block;
+    width: 200px;         /* Оптимальный размер для аватара */
+    height: 200px;
+    object-fit: cover;    /* Чтобы фото не растягивалось */
+    border-radius: 50%;   /* Делает фото круглым */
+    margin: 20px 0;
+    border: 3px solid #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Мягкая тень */
+}
