@@ -7,9 +7,9 @@ theme:
     - python
   locale: en 
 
+site_url: https://lisa-chi.github.io/  
 extra_css:
-  - stylesheets/extra.css
-
+  - stylesheets/extra.css  
 nav:
   - Welcome: index.md
   - Projects:

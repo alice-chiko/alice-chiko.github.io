@@ -10,7 +10,7 @@
 }
 
 body {
-    background: var(--bg-gradient) !important;
+    background: radial-gradient(circle, #ffffff 0%, #fff5f8 100%) !important;
     background-attachment: fixed !important;
     color: var(--text-secondary) !important;
     font-family: 'Manrope', sans-serif;
