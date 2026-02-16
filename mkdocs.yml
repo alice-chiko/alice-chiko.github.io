@@ -7,7 +7,7 @@ theme:
     - python
   locale: en 
 
-site_url: https://alice-chiko.github.io/  
+site_url: https://alice-chiko.github.io/alice-chiko.github.io/ 
 extra_css:
   - stylesheets/extra.css
 nav:
