@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap');
+
+:root {
+    --bg-gradient: radial-gradient(circle at top center, #fffbfc 0%, #fff0f5 100%);
+    --text-primary: #4a3f45;
+    --text-secondary: #6b5b63;
+    --text-accent: #a88896; 
+    --link-hover: #d4a5b3;
+    --glass-bg: rgba(255, 255, 255, 0.6);
+}
+
+body {
+    background: radial-gradient(circle, #ffffff 0%, #fff5f8 100%) !important;
+    background-attachment: fixed !important;
+    color: var(--text-secondary) !important;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 1.9; /* Чуть больше воздуха в тексте */
+}
+
+/* --- НАВИГАЦИЯ (ШАПКА) --- */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px);
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
+}
+
+.navbar-nav > li > a {
+    color: var(--text-primary) !important;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav > li > a:hover {
+    color: var(--link-hover) !important;
+    background: transparent !important;
+}
+
+/* --- ТИПОГРАФИКА --- */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 3.2rem;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+h2, h3 {
+    font-family: 'Manrope', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-accent);
+    margin-top: 50px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-bottom: 15px;
+}
+
+/* --- ССЫЛКИ И СПИСКИ --- */
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-accent);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+a:hover {
+    color: var(--link-hover);
+    border-bottom-color: transparent;
+    text-decoration: none !important;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+li::before {
+    content: "—"; /* Элегантное тире вместо точки */
+    color: var(--text-accent);
+    position: absolute;
+    left: 0;
+}
+
+/* --- ГАЛЕРЕЯ (Твои 3 фото) --- */
+table {
+    border: none !important;
+    background: transparent !important;
+    margin: 50px auto !important;
+    width: 100%;
+}
+
+td {
+    border: none !important;
+    padding: 15px !important;
+    text-align: center;
+    vertical-align: top;
+    width: 33.33%;
+}
+
+/* Стиль для фото в галерее (круглые) */
+td img {
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    border: 3px solid #fff !important;
+    box-shadow: 0 10px 30px rgba(74, 63, 69, 0.1) !important;
+    transition: transform 0.4s ease !important;
+}
+
+td img:hover {
+    transform: scale(1.08) rotate(2deg); /* Легкий живой поворот */
+}
+
+/* Подписи под фото */
+td em {
+    display: block;
+    margin-top: 15px;
+    font-family: 'Playfair Display', serif; /* Красивый шрифт для подписей */
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* --- АВАТАР (Главное фото) --- */
+/* Используем селектор по атрибуту src, чтобы не путать с галереей */
+img[src*="avatar"], img[src*="me.jpg"] { 
+    border-radius: 20px; /* Аватар сделаем мягким квадратом для контраста, или 50% для круга */
+    max-width: 250px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* Убираем лишнее */
+.container { background: transparent !important; box-shadow: none !important; border: none !important; width: 100%; max-width: 900px; padding-top: 60px; }
+.bs-sidebar .nav > .active > a { border-left: 2px solid var(--text-accent) !important; color: var(--text-primary) !important; background: transparent !important; }
+.bs-sidebar .nav > li > a { border-left: 1px solid transparent !important; }
+footer { display: none !important; }
+
+/* --- ПОЛНОЕ УДАЛЕНИЕ СИНЕЙ ШАПКИ --- */
+
+/* Делаем фон шапки прозрачно-розовым с блюром */
+.navbar-inverse, 
+.navbar-default,
+.navbar {
+    background-color: rgba(255, 250, 252, 0.5) !important; /* Очень светлый розовый */
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(15px); /* Эффект матового стекла */
+    -webkit-backdrop-filter: blur(15px);
+}
+
+/* Цвет названия сайта в шапке (слева) */
+.navbar-brand,
+.navbar-inverse .navbar-brand {
+    color: var(--text-primary) !important;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem !important;
+    font-weight: 500;
+}
+
+/* Цвет пунктов меню */
+.navbar-nav > li > a,
+.navbar-inverse .navbar-nav > li > a {
+    color: var(--text-secondary) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px !important;
+    background: transparent !important;
+    transition: color 0.3s ease;
+}
+
+/* Цвет активного пункта и при наведении */
+.navbar-nav > li > a:hover,
+.navbar-nav > li.active > a,
+.navbar-inverse .navbar-nav > li.active > a {
+    color: var(--link-hover) !important;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px;
+}
+
+/* Убираем синюю полоску в мобильном меню (бургер) */
+.navbar-toggle {
+    border: none !important;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: var(--text-accent) !important;
+}
