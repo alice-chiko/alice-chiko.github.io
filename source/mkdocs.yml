@@ -2,7 +2,6 @@ site_name: "Alisa Chikomazova | Portfolio"
 
 theme:
   name: mkdocs
-  favicon: img/favicon.png
   highlightjs: true
   hljs_languages:
     - python
