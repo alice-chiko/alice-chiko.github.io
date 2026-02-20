@@ -227,3 +227,108 @@ footer { display: none !important; }
 * {
     -webkit-tap-highlight-color: transparent;
 }
+
+/* --- РАСШИРЯЕМ ТЕКСТ НА ВСЮ СТРАНИЦУ --- */
+
+/* 1. Прячем боковую панель (навигацию слева) и ссылки навигации */
+.bs-sidebar, 
+.col-md-3, 
+.bs-sidebar.affix {
+    display: none !important;
+}
+
+/* 2. Растягиваем основной контент на 100% ширины */
+.col-md-9 {
+    width: 100% !important;
+    float: none !important;
+}
+
+/* 3. Настраиваем сам контейнер, чтобы он был широким и красивым */
+.container { 
+    max-width: 1200px !important; /* Увеличил ширину, чтобы текст "дышал" */
+    width: 90% !important;
+    margin: 40px auto !important;
+    padding: 60px !important;
+    background: var(--glass-bg) !important; 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 20px 50px rgba(168, 136, 150, 0.1) !important; 
+}
+
+/* 4. Убираем кнопки "Next" и "Previous" внизу страницы */
+hr, 
+.row > .col-md-12 {
+    display: none !important; /* Прячем нижнюю линию и кнопки перелистывания */
+}
+
+/* 5. Убираем ссылку "Edit on GitHub" и поиск, если они мешают */
+.navbar-right {
+    display: none !important;
+}
+
+/* Чтобы текст не прилипал к краям на очень больших мониторах */
+article {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- РАСПОЛОЖЕНИЕ ФОТО СБОКУ --- */
+
+/* Контейнер для текста и фото */
+.main-profile {
+    display: flex;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    justify-content: space-between;
+    gap: 40px; /* Расстояние между текстом и фото */
+    flex-wrap: wrap; /* Чтобы на телефонах фото уходило под текст */
+}
+
+/* Блок с текстом */
+.profile-text {
+    flex: 1; /* Занимает всё свободное место */
+    min-width: 300px;
+}
+
+/* Блок с фото */
+.profile-image {
+    flex: 0 0 auto;
+    margin-top: 20px;
+}
+
+/* Настройка самого фото */
+.profile-image img {
+    max-width: 300px !important; /* Можно подправить размер под себя */
+    height: auto !important;
+    border-radius: 30px;
+    border: 6px solid #fff;
+    box-shadow: 0 20px 40px rgba(168, 136, 150, 0.15);
+    transition: transform 0.4s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Адаптация для мобильных: центрируем всё на маленьких экранах */
+@media (max-width: 768px) {
+    .main-profile {
+        flex-direction: column-reverse; /* Фото будет под текстом */
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-image {
+        margin-bottom: 30px;
+    }
+}
+
+.container {
+    animation: fadeInPage 1.5s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

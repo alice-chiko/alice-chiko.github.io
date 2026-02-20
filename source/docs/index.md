@@ -1,15 +1,25 @@
-# Alisa Chikomazova
+<div class="main-profile">
+  <div class="profile-text">
 
-### About
-Welcome to my digital space. 
+    <h1>Alisa Chikomazova</h1>
 
-### Current Focus
-* **Python Development:** Building back-end architectures.
-* **AI & ML:** Researching machine learning algorithms.
+    <h3>About</h3>
+    <p>Welcome to my digital space. This portfolio showcases my journey through academic laboratories and personal projects in the world of technology.</p>
 
-### Navigation
-* [**Laboratory Works**](labs.md) — *Explore my academic progress and code samples.*
-* [**Personal Profile**](author.md) — *Learn more about my background and hobbies.*
+    <h3>Current Focus</h3>
+    <ul>
+      <li><b>Python Development:</b> Building back-end architectures and automation scripts.</li>
+      <li><b>AI & ML:</b> Researching machine learning algorithms.</li>
+    </ul>
 
----
-![Avatar](img/me.jpg)
+    <h3>Navigation</h3>
+    <ul>
+      <li><a href="labs/">Laboratory Works</a> — Explore my academic progress and reports.</li>
+      <li><a href="author/">Personal Profile</a> — Learn more about my background and hobbies.</li>
+    </ul>
+
+  </div>
+  <div class="profile-image">
+    <img src="img/me.jpg" alt="Alisa Chikomazova">
+  </div>
+</div>
