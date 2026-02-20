@@ -198,3 +198,32 @@ footer { display: none !important; }
 .navbar-inverse .navbar-toggle .icon-bar {
     background-color: var(--text-accent) !important;
 }
+/* --- ИСПРАВЛЕНИЕ СИНЕЙ ССЫЛКИ И АКТИВНЫХ ЭЛЕМЕНТОВ --- */
+
+/* 1. Цвет ссылки в боковом меню (sidebar) */
+.bs-sidebar .nav > li > a {
+    color: var(--text-secondary) !important; /* Наш основной серый/коричневый */
+    transition: all 0.3s ease;
+}
+
+/* 2. Активная ссылка (та самая синяя) */
+.bs-sidebar .nav > .active > a, 
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+    color: var(--link-hover) !important; /* Нежно-розовый при активации */
+    background-color: rgba(212, 165, 179, 0.1) !important; /* Едва заметный розовый фон */
+    font-weight: 600;
+    border-left: 2px solid var(--text-accent) !important; /* Элегантная полоска слева */
+}
+
+/* 3. Цвет при наведении на любую ссылку в меню */
+.bs-sidebar .nav > li > a:hover {
+    color: var(--link-hover) !important;
+    background-color: transparent !important;
+    padding-left: 25px; /* Легкий сдвиг вправо при наведении */
+}
+
+/* 4. Убираем синее выделение текста при нажатии на мобильных устройствах */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
