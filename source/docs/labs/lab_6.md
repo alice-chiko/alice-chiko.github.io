@@ -1,4 +1,4 @@
-# Лабораторная работа №3
+# Лабораторная работа №6
 
 ### Overview
 * **Дата:** 
@@ -11,7 +11,11 @@
 Краткое описание задачи и целей работы.
 
 ### Implementation
+
+
+### Conclusion
+
 ```python
 
 def hello_world():
-    print("Lab 3 completed")
+    print("Lab 6 completed")

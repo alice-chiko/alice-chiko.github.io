@@ -11,6 +11,10 @@
 Краткое описание задачи и целей работы.
 
 ### Implementation
+
+
+### Conclusion
+
 ```python
 
 def hello_world():

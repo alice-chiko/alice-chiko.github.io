@@ -9,3 +9,5 @@
 * [Laboratory Work 6](labs/lab_6.md)
 * [Laboratory Work 7](labs/lab_7.md)
 * [Laboratory Work 8](labs/lab_8.md)
+* [Laboratory Work 9](labs/lab_9.md)
+* [Laboratory Work 10](labs/lab_10.md)
