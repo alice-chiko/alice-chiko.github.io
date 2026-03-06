@@ -195,17 +195,32 @@
 <h1 id="no2">Лабораторная работа №2</h1>
 <h3 id="overview">Overview</h3>
 <ul>
-<li><strong>Дата:</strong> </li>
-<li><strong>Тема:</strong> Тема </li>
-<li><strong>Статус:</strong> []</li>
+<li><strong>Дата:</strong> 06.03.2026</li>
+<li><strong>Тема:</strong> Основы NumPy: массивы и векторные операции</li>
+<li><strong>Статус:</strong> [Completed]</li>
 </ul>
 <hr />
 <h3 id="objective">Objective</h3>
-<p>Краткое описание задачи и целей работы.</p>
+<p>Целью работы является освоение навыков работы с многомерными массивами <strong>NumPy</strong>, реализация матричных операций, проведение базового статистического анализа данных и визуализация результатов с помощью <strong>Matplotlib</strong> и <strong>Seaborn</strong>.</p>
 <h3 id="implementation">Implementation</h3>
+<p>В ходе работы был реализован модуль <code>main.py</code>, включающий следующие группы функций:</p>
+<ol>
+<li><strong>Создание и трансформация массивов:</strong> использование <code>np.arange</code>, <code>np.random.rand</code> и <code>vec.reshape</code> для подготовки данных.</li>
+<li><strong>Векторные и матричные операции:</strong> реализация поэлементного сложения, скалярного произведения (<code>np.dot</code>), умножения матриц (<code>@</code>) и решение систем линейных уравнений через <code>np.linalg.solve</code>.</li>
+<li><strong>Анализ данных:</strong> загрузка данных из CSV с помощью <code>pd.read_csv().to_numpy()</code> и расчет статистик (среднее, медиана, перцентили) через встроенные методы NumPy.</li>
+<li><strong>Визуализация:</strong> построение гистограмм распределения, тепловых карт корреляции и линейных графиков успеваемости. Для корректной работы в серверных средах и автоматических тестах использован бэкенд <code>matplotlib.use('Agg')</code>.</li>
+</ol>
 <h3 id="conclusion">Conclusion</h3>
-<p>```python</p>
-<p>def hello_world():
+<p>В результате выполнения работы были изучены принципы <strong>векторизации вычислений</strong>, что позволяет обрабатывать данные без использования медленных циклов Python. Успешное прохождение 17 юнит-тестов подтверждает корректность работы всех математических и статистических алгоритмов. Все сгенерированные графики сохранены в директорию <code>plots/</code> для дальнейшего анализа.</p>
+<h3 id="_1">Запуск проекта</h3>
+<ol>
+<li>Активируйте окружение: <code>source numpy_env/bin/activate</code> (или <code>Scripts\activate</code> на Windows)</li>
+<li>Запустите тесты: <code>python -m pytest tests.py -v</code></li>
+<li>Сгенерируйте отчет: <code>python main.py</code></li>
+</ol>
+<h3 id="code">Code</h3>
+<p>```python
+def hello_world():
     print("Lab 2 completed")</p></div>
             </div>
         </div>
