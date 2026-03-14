@@ -1,34 +1,19 @@
 on:
   push:
-    branches:
-      - main
+    - main
 
 workflows:
   build-site:
     tasks:
-      - name: build-and-publish-site
-        cubes:
-          - name: build-mkdocs-site
-            image: docker.io/library/python:3.14-slim
-            script:
-              - python -m pip install --upgrade pip
-              - pip install mkdocs mkdocs-material
-              - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-              - cd source 
-              - mkdocs build -d ../site
-              - cd ..
-              - ls -la ./site
+      - name: build-mkdocs-site
+        image: docker.io/library/python:3.12-slim
+        script:
+          - pip install mkdocs mkdocs-material
+          - mkdocs build -d ./site
 
-          - name: publish-to-release-branch
-            script:
-              # Создаем временную папку, чтобы не потерять данные при переключении веток
-              - cp -r ./site /tmp/site_build
-              # Переключаемся на release (или создаем её как сиротскую, если её нет)
-              - git checkout release || git checkout --orphan release
-              # Удаляем всё старое в этой ветке, чтобы сайт был чистым
-              - git rm -rf . || true
-              # Переносим собранный сайт в корень ветки
-              - cp -r /tmp/site_build/* .
-              - git add .
-              - git commit -m "feat: автоматическое обновление сайта" || echo "No changes to commit"
-              - git push origin release -f
+      - name: publish-to-release-branch
+        script:
+          - git checkout -b release || git checkout release
+          - git add -f site/
+          - git commit -m "feat: автоматическое обновление сайта" || echo "No changes"
+          - git push origin release -f
