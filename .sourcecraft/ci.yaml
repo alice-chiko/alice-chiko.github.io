@@ -1,8 +1,7 @@
 on:
   push:
-    workflows: build-site
-    filter:
-      branches: main
+    branches:
+      - main
 
 workflows:
   build-site:
@@ -22,7 +21,9 @@ workflows:
 
           - name: publish-to-release-branch
             script:
-              - git checkout -b release
+              - git config --global user.email "ci-bot@example.com"
+              - git config --global user.name "CI Bot"
+              - git checkout -b release || git checkout release
               - git add ./site
-              - git commit -m "feat: автоматическое обновление сайта"
+              - git commit -m "feat: автоматическое обновление сайта" || echo "No changes to commit"
               - git push origin release -f
