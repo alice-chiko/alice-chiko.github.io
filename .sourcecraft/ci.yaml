@@ -16,5 +16,5 @@ workflows:
         script:
           - git checkout -b release || git checkout release
           - git add -f site/
-          - git commit -m "feat: автоматическое обновление сайта" || echo "No changes to commit"
+          - git commit -m "feat: update site" || echo "No changes"
           - git push sourcecraft release -f
