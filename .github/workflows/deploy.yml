@@ -27,4 +27,5 @@ jobs:
 
       - name: Build and Deploy
         run: |
+          # Используем флаг -f, так как твой конфиг в папке source
           mkdocs gh-deploy -f source/mkdocs.yml --force
