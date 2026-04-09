@@ -16,7 +16,7 @@ jobs:
       - name: "1. Checkout main"
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Важно для корректной работы mkdocs-git-revision-date-localized-plugin, если он есть
+          fetch-depth: 0  # Подгружаем всю историю для корректной работы плагинов дат
 
       - name: "2. Initialize Python Environment"
         uses: actions/setup-python@v5
@@ -30,16 +30,12 @@ jobs:
 
       - name: "4. Build and Push to GitHub Pages"
         run: |
-          # Настройка бота, чтобы гит не ругался на отсутствие автора коммита
+          # Настройка бота для фиксации коммита в ветке gh-pages
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Сама команда деплоя:
-          # --force принудительно пушит в gh-pages
-          # --clean удаляет старые файлы из папки сборки перед новой
-          # --ignore-version-edit помогает, если в ветке gh-pages застряли метаданные от старых версий
-          mkdocs gh-deploy --config-file mkdocs.yml --force --clean --ignore-version-edit
-
-
-
-
+          # Выполняем деплой:
+          # --force гарантирует перезапись ветки gh-pages
+          # --clean удаляет старые артефакты сборки
+          # --ignore-version предотвращает конфликты версий MkDocs
+          mkdocs gh-deploy --config-file mkdocs.yml --force --clean --ignore-version
