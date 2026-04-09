@@ -38,7 +38,7 @@ theme:
   locale: en
 
 extra_css:
-  - stylesheets/extra.css
+  - extra.css
 
 plugins:
   - search
