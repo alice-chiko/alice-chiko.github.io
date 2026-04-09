@@ -8,7 +8,8 @@
 ---
 
 ## Link
-Ссылка на борд: https://colab.research.google.com/drive/1MZsbRIpQkzp3u-hFEvRCNfPpVXyJRekp?usp=sharing
+
+[Ссылка на борд](https://colab.research.google.com/drive/1MZsbRIpQkzp3u-hFEvRCNfPpVXyJRekp?usp=sharing)
 
 
 ### Objective
