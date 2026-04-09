@@ -18,6 +18,7 @@ jobs:
         with:
           fetch-depth: 0  # Подгружаем всю историю для корректной даты правок
 
+
       - name: "2. Initialize Python Environment"
         uses: actions/setup-python@v5
         with:
