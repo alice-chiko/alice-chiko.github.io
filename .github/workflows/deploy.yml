@@ -1,31 +1,34 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy MkDocs Site
 
 on:
   push:
     branches:
-      - main
+      - main  
 
 permissions:
-  contents: write
+  contents: write 
 
 jobs:
-  deploy:
+  build:
+    name: Deploy docs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: "1. Checkout main"
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # Подгружаем всю историю для корректной даты правок
 
-      - name: Set up Python
+      - name: "2. Initialize Python Environment"
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+      - name: "3. Install Project Dependencies"
         run: |
           pip install -r requirements.txt
 
-     - name: Build and Deploy
+      - name: "4. Build and Push to GitHub Pages"
         run: |
-          # Теперь файл в корне, поэтому путь просто mkdocs.yml
-          mkdocs gh-deploy -f mkdocs.yml --force
+          # Используем встроенную команду mkdocs для деплоя
+          # Флаг --force гарантирует перезапись ветки gh-pages
+          mkdocs gh-deploy --config-file mkdocs.yml --force --clean
