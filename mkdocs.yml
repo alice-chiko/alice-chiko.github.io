@@ -1,6 +1,18 @@
 site_name: "Alisa Chikomazova | Portfolio"
 site_url: https://alice-chiko.github.io/
 
+theme:
+  name: mkdocs
+  highlightjs: true
+  hljs_languages:
+    - python
+  locale: en
+
+extra_css:
+  - extra.css
+
+docs_dir: 'src/docs'
+
 nav:
   - Welcome: index.md
   - About me: author.md
@@ -30,17 +42,3 @@ nav:
           - Lab 9: laboratory_works/term_2/labs/lab_9.md
           - Lab 10: laboratory_works/term_2/labs/lab_10.md
 
-theme:
-  name: mkdocs
-  highlightjs: true
-  hljs_languages:
-    - python
-  locale: en
-
-extra_css:
-  - extra.css
-
-plugins:
-  - search
-
-docs_dir: 'src/docs'
