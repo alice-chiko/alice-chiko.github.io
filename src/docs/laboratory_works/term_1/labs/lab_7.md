@@ -19,3 +19,4 @@
 
 def hello_world():
     print("Lab 7 completed")
+```

@@ -1,5 +1,7 @@
 # All Laboratory Works 
 
+* [Typing Practice](laboratory_works/train.md)
+
 ## Term 1
 * [Laboratory Work 1](laboratory_works/term_1/labs/lab_1.md)
 * [Laboratory Work 2](laboratory_works/term_1/labs/lab_2.md)

@@ -18,6 +18,7 @@ nav:
   - About me: author.md
   - Projects:
       - Overview: labs.md
+      - Typing Practice: laboratory_works/train.md
       - Term 1:
           - Lab 1: laboratory_works/term_1/labs/lab_1.md
           - Lab 2: laboratory_works/term_1/labs/lab_2.md

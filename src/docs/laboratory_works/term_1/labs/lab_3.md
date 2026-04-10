@@ -25,4 +25,5 @@
 ### Code
 ```python
 def hello_world():
-    print("Lab 3 completed"))
+    print("Lab 3 completed")
+```
